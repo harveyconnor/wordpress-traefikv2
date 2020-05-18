@@ -16,9 +16,7 @@ services:
       - ./wordpress:/var/www/html
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     depends_on:
-      - db    
-    ports:
-      - 8080:80
+      - db
     labels:
       - traefik.enable=true
       - traefik.http.routers.wordpress.rule=Host(`${HOSTNAME}`)
