@@ -5,7 +5,7 @@ services:
   wordpress:
     hostname: ${HOSTNAME}
     container_name: wordpress
-    image: wordpress:5.3.2
+    image: wordpress:latest
     restart: always
     environment:
       WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
@@ -29,7 +29,7 @@ services:
       default:
 
   db:
-    image: mariadb:10.5
+    image: mariadb:latest
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
